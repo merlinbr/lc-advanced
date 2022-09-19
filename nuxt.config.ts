@@ -2,6 +2,7 @@ import { defineNuxtConfig } from 'nuxt'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+  modules: ['@nuxtjs/supabase'],
   build: {
     transpile: ['@heroicons/vue'],
     postcss: {
@@ -14,7 +15,7 @@ export default defineNuxtConfig({
     },
   },
   css: [
-    "~/assets/css/tailwind.css"
+    '@/assets/css/tailwind.css',
   ],
 
 })

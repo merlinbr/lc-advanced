@@ -29,8 +29,12 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import {GlobeAltIcon, ScaleIcon, ArchiveBoxIcon, BeakerIcon} from '@heroicons/vue/24/outline'
+
+definePageMeta({
+  middleware: ['auth']
+})
 
 const features = [
   {

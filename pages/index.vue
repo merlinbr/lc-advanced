@@ -1,5 +1,11 @@
 <template>
-  <div class="container mx-auto bg-gray-300 p-8">
-    <h1 class="font-bold text-gray-600 text-lg">Hello, Tailwind 3!!</h1>
-  </div>
+  <Account v-if="user" />
+  <Auth v-else />
 </template>
+
+<script setup lang="ts">
+import Account from '../components/Account.vue'
+import Auth from '../components/Auth.vue'
+
+const user = useSupabaseUser();
+</script>
